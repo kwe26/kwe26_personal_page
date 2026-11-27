@@ -21,8 +21,9 @@
         <div class="dialog-content">
             <h1 id="modal-title"></h1>
             <div id="modal-content"></div>
-            <div id="modal-buttons">
-
+            <div id="modal-buttons" class="side_row" style="padding-top: 50px;">
+                <a class="no-btn" href="javascript:closeDialog()"></a>
+                <a class="okay-btn" id="okay-btn"></a>
             </div>
         </div>
     </dialog>
@@ -31,10 +32,23 @@
 
     <script type="text/javascript">
         // Opens the custom dialog
-        function openDialog(title, content){
+        function openDialog(title, content, okayBtn=""){
             document.getElementById('modal').showModal();
             document.getElementById("modal-title").innerHTML = title;
-            document.getElementById("modal-content").innerHTML = title;
+            document.getElementById("modal-content").innerHTML = content;
+            document.getElementById("okay-btn").setAttribute("href", okayBtn);
+        }
+
+        function closeDialog(){
+            document.getElementById('modal').close();
+        }
+
+        function openLink(link){
+            if(link == "github"){
+                openDialog("You want to leave my website?", "Ohh you just want to explore what have i done on github am i right?? right??", `javascript:window.open('https://github.com/kwe26', '_blank', 'noopener,noreferrer')`);
+            }else if(link == "donate"){
+                openDialog("You want to donate??", "I would love your donations, ;33333 thanksss love uu", `javascript:window.open('https://github.com/sponsors/kwe26', '_blank', 'noopener,noreferrer')`)
+            }
         }
     </script>
 </body>
