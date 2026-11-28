@@ -18,7 +18,7 @@
         <a href="/arts" class="nav-item animate__animated animate__slideInLeft {arts}"> Arts </a>
     </nav>
 
-    <dialog id="modal" class="animate__animated animate__slideInDown">
+    <dialog id="modal" class="tbhk_image animate__animated animate__slideInDown">
         <div class="dialog-content">
             <h1 id="modal-title"></h1>
             <div id="modal-content"></div>
@@ -26,6 +26,14 @@
                 <a class="no-btn" href="javascript:closeDialog()"></a>
                 <a class="okay-btn" id="okay-btn"></a>
             </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal2" class="animate__animated animate__slideInDown">
+        <div class="dialog-content">
+            <p style="padding: 0; margin: 0;">Press Esc to Exit-- Music Keeps Playing btw</p>
+            <h1 id="modal2-title" style="padding: 0; margin: 0;"></h1>
+            <div id="modal2-content"></div>
         </div>
     </dialog>
 
@@ -38,6 +46,31 @@
             document.getElementById("modal-title").innerHTML = title;
             document.getElementById("modal-content").innerHTML = content;
             document.getElementById("okay-btn").setAttribute("href", okayBtn);
+        }
+
+        function openDialog2(title, content, okayBtn=""){
+            document.getElementById('modal2').showModal();
+            document.getElementById("modal2-title").innerHTML = title;
+            document.getElementById("modal2-content").innerHTML = content;
+        }
+
+        function openAnimeSong(val=""){
+            if(val == "tbhk"){
+                document.getElementById('modal2').className = "tbhk_img animate__animated animate__slideInDown";
+                openDialog2("Toilet-bound Hanako-kun", `<iframe width="450" height="200" src="https://www.youtube.com/embed/VCR5hKNMKBo?list=RDVCR5hKNMKBo&autoplay=1" title="【AMV】Landbound boy Hanako-kun × KagomeKagome 【English subtitles】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
+            }else if(val == "rezero"){
+                openDialog2("Re:Zero Ender Ember AMV", `<iframe width="450" height="200" src="https://www.youtube.com/embed/K0f7jwGBRGM?list=RDK0f7jwGBRGM&autoplay=1" title="【リゼロ】MYTH & ROID feat. TK (凛として時雨)「Ender Ember」-lyric video-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
+                document.getElementById('modal2').className = "zero_img animate__animated animate__slideInDown";
+            }else if(val == "kaguya"){
+                openDialog2("Kaguya-sama: Love is war", `<iframe width="450" height="200" src="https://www.youtube.com/embed/4ANpychCrf0?list=RD4ANpychCrf0&autoplay=1" title="Masayuki Suzuki feat. Aoi Koga"Abunaikioku"×"Kaguya-sama: Love Is War"Memories Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
+                document.getElementById('modal2').className = "kaguya_img animate__animated animate__slideInDown";
+            }else if(val == "onk"){
+                openDialog2("Oshi No Ko: TEST ME", `<iframe width="450" height="200" src="https://www.youtube.com/embed/E4zWgXBtqDs?list=RDE4zWgXBtqDs&autoplay=1" title="Lyrics AMV』 Oshi no Ko OP Full - TEST ME / CHANMINA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
+                document.getElementById('modal2').className = "onk_img animate__animated animate__slideInDown";
+            }else if(val == "op"){
+                openDialog2("One Piece", `<iframe width="450" height="200" src="https://www.youtube.com/embed/YuyswfLIVG0?list=RDYuyswfLIVG0&autoplay=1" title="GRe4N BOYZ - 'Kiseki' x "ONE PIECE" | Manga Collaboration Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`)
+                document.getElementById('modal2').className = "op_img animate__animated animate__slideInDown";
+            }
         }
 
         function closeDialog(){

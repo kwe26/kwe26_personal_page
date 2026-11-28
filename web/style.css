@@ -112,12 +112,31 @@ dialog {
     box-sizing: border-box;
 
     background: transparent;
-    background-image: url("assets/dialog.png");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 
     overflow: visible;
+}
+
+.tbhk_img, .tbhk_image{
+    background-image: url("assets/dialog.png");
+}
+
+.zero_img{
+    background-image: url("assets/zero_dialog.png");
+}
+
+.op_img{
+    background-image: url("assets/op_dialog.png");
+}
+
+.onk_img{
+    background-image: url("assets/onk_dialog.png");
+}
+
+.kaguya_img{
+    background-image: url("assets/kaguya_dialog.png");
 }
 
 dialog[open] {
@@ -149,14 +168,16 @@ dialog::backdrop {
 }
 
 .main-content {
-    flex: 1;
+    /* flex: 1;
     min-height: 0;
     width: 100%;
+    padding-bottom: 20px;
     box-sizing: border-box;
 
     border: 3px solid #741126;
     padding: 20px 4px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    /* overflow: none;  */
 }
 
 ::-webkit-scrollbar {
@@ -236,6 +257,55 @@ dialog::backdrop {
     overflow: auto;
 }
 
+.home-favanim{
+    margin: auto;
+
+    margin-top: 1;
+
+    width: 1200px;
+    height: 450px;
+    padding: 0;
+
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+    background: transparent;
+    background-image: url("assets/my_anime_favs.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.home-favanim .content{
+    width: 1200px;
+
+    padding: 100.2px;
+    box-sizing: border-box;
+
+    background: transparent;
+    color: #1d325a;
+
+    font-family: "Agrave Pro", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+
+    overflow: auto;
+}
+
+.side_row_2{
+    display: flex;
+    margin-left: 15px;
+    gap: 20px;
+}
+
+.side_row_2 img{
+    border-radius: 5px;
+}
+
 .nene_prof {
     width: 100px;
     height: 100px;
@@ -305,4 +375,8 @@ dialog::backdrop {
 .no-btn:hover{
     background-image: url("assets/no_hover.png");
     transform: scale(1.05) translateY(-3px);
+}
+
+.modal-content iframe{
+    border-radius: 4px;
 }
