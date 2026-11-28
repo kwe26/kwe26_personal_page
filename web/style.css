@@ -147,8 +147,8 @@ dialog[open] {
 
 dialog .dialog-content {
     width: 470px;
-    height: 350px;
-    padding: 10px;
+    height: 400px;
+    padding: 7px;
     box-sizing: border-box;
 
     background: transparent;
@@ -400,4 +400,73 @@ dialog::backdrop {
 .visitor *{
     padding: 0;
     margin: 0;
+}
+
+.create-new-note{
+    width: 420px;
+    height: 67px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    color: #5f0825;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 30px;
+    border: 5px solid #5f0825;
+    border-radius: 10px;
+    background-color: #e6c7d6;
+}
+.create-new-note *{
+    padding: 0;
+    margin: 0;
+}
+
+select, textarea{
+    width: 100%;
+    border: 3px solid #5f0825;
+    border-radius: 5px;
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+}
+
+input{
+    width: 95%;
+    border: 3px solid #5f0825;
+    border-radius: 5px;
+    font-family: "Just Me Again Down Here", cursive;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0;
+}
+
+.lists{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.list {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    color: #5f0825;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 30px;
+    border: 5px solid #5f0825;
+    border-radius: 10px;
+    background-color: #e6c7d6;
+}
+
+.list p{
+    margin: 0;
+    padding: 0;
 }
