@@ -4,7 +4,7 @@ import { Database } from "bun:sqlite"
 
 const app = express();
 
-const db = new Database("main.db", {
+const db = new Database(process.env['DB'], {
     create: true
 })
 
@@ -55,7 +55,7 @@ app.get("/:route", (req, res) => {
     res.send(parseRoute(req.params.route));
 })
 
-app.listen(3000, () => {
-    console.log("[*] Server Running at :3000.")
+app.listen(process.env['PORT'], () => {
+    console.log("[*] Server Running at :" + process.env['PORT'])
     console.log("i love hananene, mitskou, aoiaoi")
 });
